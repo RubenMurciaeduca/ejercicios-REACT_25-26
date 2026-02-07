@@ -1,0 +1,33 @@
+.gris {
+    background-color: gray;
+}
+
+.amarillo {
+    background-color: yellow;
+}
+
+div div {
+    border: 1px solid black;
+    border-radius: 7px;
+    width: 380px;
+    height: 55px;
+    
+    text-align: center;
+}
+
+div p {
+    margin-bottom: 20px;
+}
+
+button {
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    width: 20em
+}
