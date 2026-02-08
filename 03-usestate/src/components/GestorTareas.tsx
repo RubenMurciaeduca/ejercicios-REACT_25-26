@@ -21,8 +21,10 @@ export const GestorTareas = () => {
     const handleSubmit = (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault(); // lo primero que hacemos en un formulario
         // aplico las validaciones necesarias
+
+        // usestate funcional, se le pasa una función que recibe el estado anterior y devuelve el nuevo estado, así nos aseguramos de tener siempre el estado actualizado aunque haya varias actualizaciones seguidas
         if (titulo.trim()){
-            setTareas([
+            setTareas( tareas => [
                 ...tareas,
                 {
                     id : uuid(),

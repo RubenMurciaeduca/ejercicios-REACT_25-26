@@ -18,7 +18,8 @@ export const GestorDeTareas = () => {
         e.preventDefault();
         if (!tareas.some(t=>t.nombre === nombre)){
             setNumChanges(s=>s+1)
-            setTareas([
+            // de nuevo el usestate funcional, es fundamental entenderlo para evitar problemas de estado desactualizado
+            setTareas( tareas => [
                 ...tareas,
                 {
                     nombre : nombre

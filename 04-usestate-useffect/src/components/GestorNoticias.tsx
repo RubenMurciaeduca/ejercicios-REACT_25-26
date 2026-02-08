@@ -21,6 +21,8 @@ export const GestorNoticias = () => {
 
     useEffect(() => {
         const creacion = setInterval(() => {
+            // SUPER IMPORTANTE ENTENDER ESTO, ESTO ES EL 90% DEL USESTATE
+            // usestate funcional, se le pasa una función que recibe el estado anterior y devuelve el nuevo estado, así nos aseguramos de tener siempre el estado actualizado aunque haya varias actualizaciones seguidas
             setNoticias(prevNoticias => {
                 if (prevNoticias.length === 0) return prevNoticias
 

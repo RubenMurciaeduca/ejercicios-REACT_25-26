@@ -19,7 +19,8 @@ export const GestorJugadores = () => {
         e.preventDefault(); // lo primero que hacemos en un formulario
         // aplico las validaciones necesarias puedes añadir más si quieres hacerlo mejor
         if (nombre.trim()){
-            setJugadores([
+            // SUPER IMPORTANTE ENTENDER ESTO, ESTO ES EL 90% DEL USESTATE
+            setJugadores( jugadores => [
                 ...jugadores,
                 {
                     id : uuid(),
